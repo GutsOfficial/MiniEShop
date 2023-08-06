@@ -1,0 +1,56 @@
+@model CategoryViewModel
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Admin Panel</h1>
+        <hr>
+        <a class="btn btn-primary btn-sm" href="/admin/categories/create">Kategori Ekle</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td style="width 30px;">Id</td>                  
+                    <td>Name</td>
+                    <td></td>
+                   
+
+                </tr>
+            </thead>
+            <tbody>
+                @if(Model.kategoriler.Count>0){
+                @foreach(var item in @Model.kategoriler){
+                <tr>
+                    <td>@item.CategoryId</td>
+                   
+                    <td>@item.Name</td>                   
+                    <td>
+                        <a class="btn btn-primary" href="/admin/categories/@item.CategorytId">
+                            Details
+                        </a>
+                    </td>
+                    <td>
+                        <form asp-controller="Admin" asp-action="deletecategory" method="POST" style="display: inline;">
+                            <input type="hidden" name="categoryId" value="@item.CategorytId">
+                            <button type="submit" class="btn btn-danger">
+                                Delete
+                            </button>
+                        </form>
+
+                    </td>
+
+                </tr>
+               }
+            }
+             else{
+                <div class="alert alert-warning">
+                    <h3>
+                        NO Categories
+                    </h3>
+                </div>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>

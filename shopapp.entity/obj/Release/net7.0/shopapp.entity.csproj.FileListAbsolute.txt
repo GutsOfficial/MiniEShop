@@ -1,0 +1,12 @@
+C:\Users\Administrator\Downloads\2agustos\shopapp.entity\bin\Release\net7.0\shopapp.entity.deps.json
+C:\Users\Administrator\Downloads\2agustos\shopapp.entity\bin\Release\net7.0\shopapp.entity.dll
+C:\Users\Administrator\Downloads\2agustos\shopapp.entity\bin\Release\net7.0\shopapp.entity.pdb
+C:\Users\Administrator\Downloads\2agustos\shopapp.entity\obj\Release\net7.0\shopapp.entity.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\2agustos\shopapp.entity\obj\Release\net7.0\shopapp.entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\2agustos\shopapp.entity\obj\Release\net7.0\shopapp.entity.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\2agustos\shopapp.entity\obj\Release\net7.0\shopapp.entity.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\2agustos\shopapp.entity\obj\Release\net7.0\shopapp.entity.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\2agustos\shopapp.entity\obj\Release\net7.0\shopapp.entity.dll
+C:\Users\Administrator\Downloads\2agustos\shopapp.entity\obj\Release\net7.0\refint\shopapp.entity.dll
+C:\Users\Administrator\Downloads\2agustos\shopapp.entity\obj\Release\net7.0\shopapp.entity.pdb
+C:\Users\Administrator\Downloads\2agustos\shopapp.entity\obj\Release\net7.0\ref\shopapp.entity.dll
