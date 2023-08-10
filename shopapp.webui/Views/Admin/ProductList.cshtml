@@ -1,4 +1,4 @@
-@model ProductModel
+@model ProductViewModel
 
 
 
@@ -6,7 +6,7 @@
     <div class="col-md-12">
         <h1>Admin Panel</h1>
         <hr>
-        <a class="btn btn-primary btn-sm" href="/admin/products/create">Ürün Ekle</a>
+        <a class="btn btn-primary btn-sm" href="/admin/products/create">ï¿½rï¿½n Ekle</a>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -19,39 +19,41 @@
                 </tr>
             </thead>
             <tbody>
-            @if(Model.Products.Count>0){
-                @foreach(var item in @Model.kategoriler){
-                    <tr>
-                    <td>@item.CategoryId</td>
-                    
-                      <td>@item.Name</td>
-                     
-                        <td>
-                        <a class="btn btn-primary" href="/admin/categories/@item.CategoryId">
-                        Details
+                @if(Model.Products.Count>0)
+                {
+                @foreach (var item in Model.Products)
+                        {
+                <tr>
+                    <td>@item.ProductId</td>
+                    <td><img src="~/img/@item.ImageUrl" width="80"></td>
+                    <td>@item.Name</td>
+                    <td>@item.Price</td>
+                    <td>
+                        <a class="btn btn-primary" href="/admin/products/@item.ProductId">
+                            Details
                         </a>
-                        </td>
-                         <td>
-                         <form asp-controller="Admin" asp-action="deletecategory" method="POST" style="display: inline;">
-                        <input type="hidden" name="categoryId" value="@item.CategoryId">
-                        <button type="submit" class="btn btn-danger">
-                        Delete
-                        </button>
-                         </form>
-                        
-                        </td>
-                        
+                    </td>
+                    <td>
+                        <form asp-controller="Admin" asp-action="DeleteProduct" method="POST" style="display: inline;">
+                            <input type="hidden" name="productId" value="@item.ProductId">
+                            <button type="submit" class="btn btn-danger">
+                                Delete
+                            </button>
+                        </form>
+
+                    </td>
+
                 </tr>
                }
             }
              else{
-                    <div class="alert alert-warning">
-                    <h3> 
-                    NO PRODUCTS
+                <div class="alert alert-warning">
+                    <h3>
+                        NO PRODUCTS
                     </h3>
-                    </div>
+                </div>
                 }
-                
+
             </tbody>
             </table>
             </div>

@@ -39,4 +39,11 @@ public class CategoryManager : ICategoryService
     {
         repo.Update(entity);
     }
+    public Category GetByIdWithProduct(int categoryId)
+    {
+        return repo.GetByIdWithProduct(categoryId);
+    }
+    public void DeleteFromCategory(int categoryId, int productId){
+        repo.DeleteFromCategory(categoryId,productId);
+    }
 }

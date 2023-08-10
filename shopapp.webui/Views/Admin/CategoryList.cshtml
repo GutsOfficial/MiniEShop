@@ -25,13 +25,13 @@
                    
                     <td>@item.Name</td>                   
                     <td>
-                        <a class="btn btn-primary" href="/admin/categories/@item.CategorytId">
+                        <a class="btn btn-primary" href="/admin/categories/@item.CategoryId">
                             Details
                         </a>
                     </td>
                     <td>
                         <form asp-controller="Admin" asp-action="deletecategory" method="POST" style="display: inline;">
-                            <input type="hidden" name="categoryId" value="@item.CategorytId">
+                            <input type="hidden" name="categoryId" value="@item.CategoryId">
                             <button type="submit" class="btn btn-danger">
                                 Delete
                             </button>

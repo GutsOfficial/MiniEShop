@@ -1,35 +1,52 @@
 
-@model ProductDetailModel
+            @model ProductDetailModel
 
 
 
-<div class="row ">
+            <div class="row ">
 
-<div class="col-md-3">
-<img src="~/img/@Model.urun.ImageUrl" class="img-fluid">
-</div>
-<div class="col-md-9">
+            <div class="col-md-3">
+            <img src="~/img/@Model.urun.ImageUrl" class="img-fluid">
+            </div>
+            <div class="col-md-9">
 
-<h5 class="mb-3">@Model.urun.Name</h5><hr>
-@foreach(var item in @Model.kategoriler){
-<a asp-controller="shop" asp-action="list" asp-route-category="@item.Url" class="btn btn-link p-0 mb-3">
-@item.Name
-</a>
-}
+            <h5 class="mb-3">@Model.urun.Name</h5><hr>
+            @foreach(var item in @Model.kategoriler){
+            <a asp-controller="shop" asp-action="list" asp-route-category="@item.Url" class="btn btn-link p-0 mb-3">
+            @item.Name
+            </a>
+            }
 
-<h6 class="card-text">
+            <h6 class="card-text">
 
-@Model.urun.Price
-</h6>
-<button type="submit" class="btn btn-primary btn-lg">
-Karta ekle
-</button>
+            @Model.urun.Price
+            </h6>
 
-</div>
-</div>
-<div class="row">
-<div class="col-md-12">
+        <form method="POST" asp-controller="Cart" asp-action="AddToCart" style="display:inline;" class="form-inline">
+            <input type="hidden" name="productId" value="@Model.urun.ProductId">
+            <div class="input-group mb-3">
+            <input type="number" name="quantity" class="form-control" min="1" value="1" step="1" style="width:100px;">
+            <div class="input-group-append">
+            <button type="submit">
+            <i class="fas fa-cart-plus"></i>Add To Cart
+            </button>
+            </div>
+            </div>
+           
 
-<p class="p-3">@Model.urun.Description</p>
-</div>
-</div>
+        </form>
+ 
+
+        
+    
+    
+            
+
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12">
+
+            <p class="p-3">@Model.urun.Description</p>
+            </div>
+            </div>

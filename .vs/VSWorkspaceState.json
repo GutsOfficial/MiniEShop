@@ -1,15 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\shopapp.entity",
     "\\shopapp.webui",
-    "\\shopapp.webui\\Models",
+    "\\shopapp.webui\\Identity",
     "\\shopapp.webui\\Views",
-    "\\shopapp.webui\\Views\\Admin",
-    "\\shopapp.webui\\Views\\Home",
-    "\\shopapp.webui\\Views\\Shared",
-    "\\shopapp.webui\\Views\\Shop"
+    "\\shopapp.webui\\Views\\Home"
   ],
-  "SelectedNode": "\\shopapp.webui\\Models\\ProductModel.cs",
+  "SelectedNode": "\\shopapp.webui\\Identity\\User.cs",
   "PreviewInSolutionExplorer": false
 }

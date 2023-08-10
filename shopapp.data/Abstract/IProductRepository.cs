@@ -13,7 +13,8 @@ namespace shopapp.data.Abstract
         int GetCountByCategory(string category);
         List<Product> GetPopularProducts();
         List<Product> GetHomeProducts();
-
+        Product GetByIdWithCategories(int id);
         List<Product> GetSearchResult(string key);
+        void Update(Product entity, int[] categoryId);
     }
 }

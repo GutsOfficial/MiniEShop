@@ -58,7 +58,35 @@ namespace shopapp.data.Concrete.EfCore
                     .Any(a=>a.kategori.Url==category));
                 }
                 return products.Count();
+             }
+        
         }
-    }
+            public Product GetByIdWithCategories(int id)
+        {
+             using(var context = new ShopContext()){
+                return context.Products.Where(i=>i.ProductId==id)
+                .Include(i=>i.productcategory)
+                .ThenInclude(i=>i.kategori)
+                .FirstOrDefault();
+            }
+        }
+        public void Update(Product entity, int[] categoryId){
+             using(var context = new ShopContext()){
+               var  product = context.Products.Include(i=>i.productcategory).FirstOrDefault(i=>i.ProductId==entity.ProductId);
+               if(product!=null){
+                product.Name=entity.Name;
+                product.Price=entity.Price;
+                product.Description=entity.Description;
+                product.ImageUrl=entity.ImageUrl;
+                product.Url=entity.Url;
+                product.productcategory= categoryId.Select(catid=>new ProductCategory(){
+                        ProductId=entity.ProductId,
+                        CategoryId=catid
+                }).ToList();
+                    context.SaveChanges();
+               }
+
+            }
+        }
 }
 }

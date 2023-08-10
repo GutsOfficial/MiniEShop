@@ -17,6 +17,45 @@ namespace shopapp.data.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.9");
 
+            modelBuilder.Entity("shopapp.entity.Cart", b =>
+                {
+                    b.Property<int>("CartId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CartId");
+
+                    b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("shopapp.entity.CartItem", b =>
+                {
+                    b.Property<int>("CartItemId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CartId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("CartItemId");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CartItems");
+                });
+
             modelBuilder.Entity("shopapp.entity.Category", b =>
                 {
                     b.Property<int>("CategoryId")
@@ -53,9 +92,6 @@ namespace shopapp.data.Migrations
                     b.Property<bool>("IsApproved")
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("IsHome")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(60)
@@ -89,6 +125,25 @@ namespace shopapp.data.Migrations
                     b.ToTable("ProductCategory");
                 });
 
+            modelBuilder.Entity("shopapp.entity.CartItem", b =>
+                {
+                    b.HasOne("shopapp.entity.Cart", "sepet")
+                        .WithMany("sepetItems")
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("shopapp.entity.Product", "urun")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("sepet");
+
+                    b.Navigation("urun");
+                });
+
             modelBuilder.Entity("shopapp.entity.ProductCategory", b =>
                 {
                     b.HasOne("shopapp.entity.Category", "kategori")
@@ -106,6 +161,11 @@ namespace shopapp.data.Migrations
                     b.Navigation("kategori");
 
                     b.Navigation("urun");
+                });
+
+            modelBuilder.Entity("shopapp.entity.Cart", b =>
+                {
+                    b.Navigation("sepetItems");
                 });
 
             modelBuilder.Entity("shopapp.entity.Category", b =>

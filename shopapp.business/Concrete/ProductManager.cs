@@ -58,5 +58,12 @@ namespace shopapp.business.Concrete
          public List<Product> GetHomeProducts(){
             return repo.GetHomeProducts();
          }
+         public Product GetByIdWithCategories(int id){
+            return repo.GetByIdWithCategories(id);
+         }
+         public void Update(Product entity, int[] categoryId)
+        {
+             repo.Update(entity,categoryId);
+        }
     }
 }

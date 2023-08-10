@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3nsQiwFffQkMqvaXEGmnzGDxTvY388sVxAmos43lFOY=",
+  "Hash": "dW5LJf36z5EdrNmtR2842z0wVFmgPn51dhwBos2nkgM=",
   "Source": "shopapp.webui",
   "BasePath": "_content/shopapp.webui",
   "Mode": "Default",
@@ -185,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\6.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Administrator\\Downloads\\2agustos\\shopapp.webui\\wwwroot\\img\\638270218877000120.jpg",
+      "SourceId": "shopapp.webui",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrator\\Downloads\\2agustos\\shopapp.webui\\wwwroot\\",
+      "BasePath": "_content/shopapp.webui",
+      "RelativePath": "img/638270218877000120.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\638270218877000120.jpg"
     },
     {
       "Identity": "C:\\Users\\Administrator\\Downloads\\2agustos\\shopapp.webui\\wwwroot\\img\\7.jpg",

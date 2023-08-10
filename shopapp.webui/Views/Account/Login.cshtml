@@ -1,0 +1,17 @@
+@model LoginModel
+
+
+<h3>Login</h3>
+<form asp-controller="Account" asp-action="Login" method="POST">
+   
+     <div class="form-group">
+        <label>UserName</label>
+        <input type="text" class="form-control" Name="UserName" id="UserName">
+    </div>
+     <div class="form-group">
+        <label>Password</label>
+        <input type="text" class="form-control" Name="Password" id="Password">
+    </div>
+      
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>

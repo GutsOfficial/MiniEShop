@@ -73,3 +73,11 @@ C:\Users\Administrator\Downloads\2agustos\shopapp.webui\bin\Debug\net7.0\shopapp
 C:\Users\Administrator\Downloads\2agustos\shopapp.webui\bin\Debug\net7.0\shopapp.business.pdb
 C:\Users\Administrator\Downloads\2agustos\shopapp.webui\bin\Debug\net7.0\shopapp.data.pdb
 C:\Users\Administrator\Downloads\2agustos\shopapp.webui\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Administrator\Downloads\2agustos\shopapp.webui\bin\Debug\net7.0\package-lock.json
+C:\Users\Administrator\Downloads\2agustos\shopapp.webui\bin\Debug\net7.0\package.json
+C:\Users\Administrator\Downloads\2agustos\shopapp.webui\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Administrator\Downloads\2agustos\shopapp.webui\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Administrator\Downloads\2agustos\shopapp.webui\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Administrator\Downloads\2agustos\shopapp.webui\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Administrator\Downloads\2agustos\shopapp.webui\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Administrator\Downloads\2agustos\shopapp.webui\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
